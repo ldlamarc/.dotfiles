@@ -146,9 +146,9 @@ bindkey -v
 bindkey ^R history-incremental-search-backward 
 bindkey ^S history-incremental-search-forward
 
-readonly python_path=$(which python3)
-readonly python_version=$(${python_path} --version | sed -nE 's/.*([0-9]+\.[0-9]+)\.[0-9]+/\1/p')
+# readonly python_path=$(which python3)
+# readonly python_version=$(${python_path} --version | sed -nE 's/.*([0-9]+\.[0-9]+)\.[0-9]+/\1/p')
 
-export PATH=${PATH}:${HOME}/Library/Python/${python_version}/bin
+# export PATH=${PATH}:${HOME}/Library/Python/${python_version}/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
