@@ -92,9 +92,6 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 -- Go to plugins
 vim.keymap.set("n", "<leader>x", "<cmd>e ~/.config/nvim/lua/vanilla/packer.lua<CR>");
 
--- Make it rain
-vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
-
 -- Source file
 vim.keymap.set("n", "<leader><leader>", function()
   vim.cmd("so")
