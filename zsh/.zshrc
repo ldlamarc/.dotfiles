@@ -136,6 +136,7 @@ alias cat="bat"
 export GIT_HOOKS=''
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export PATH="/usr/local/opt/libpq/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 export GPG_TTY=$(tty)
 export EDITOR="nvim"
 

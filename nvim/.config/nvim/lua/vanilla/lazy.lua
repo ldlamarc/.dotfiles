@@ -71,6 +71,7 @@ require("lazy").setup({
       --   If not available, we use `mini` as the fallback
       "rcarriga/nvim-notify",
     }
-  }
-
+  },
+  -- Tmux navigation (requires same in tmux)
+  'christoomey/vim-tmux-navigator',
 })

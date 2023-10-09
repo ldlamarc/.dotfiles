@@ -30,15 +30,16 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set("n", "Q", "<nop>")
 
 -- Search through tmux sessions
--- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- Pane creation, movement and deletion
 vim.keymap.set("n", "<leader>sl", "<cmd>vsplit<CR><C-w>l")
 vim.keymap.set("n", "<leader>sj", "<cmd>split<CR><C-w>j")
-vim.keymap.set("n", "<leader>wh", "<C-w>h")
-vim.keymap.set("n", "<leader>wj", "<C-w>j")
-vim.keymap.set("n", "<leader>wk", "<C-w>k")
-vim.keymap.set("n", "<leader>wl", "<C-w>l")
+-- This matches the tmux pane movement
+vim.keymap.set("n", "<C-h>", "<C-w>h")
+vim.keymap.set("n", "<C-j", "<C-w>j")
+vim.keymap.set("n", "<C-k", "<C-w>k")
+vim.keymap.set("n", "<C-l", "<C-w>l")
 vim.keymap.set("n", "<leader>dh", "<C-w>h<c<md>close<CR>")
 vim.keymap.set("n", "<leader>dj", "<C-w>j<cmd>close<CR>")
 vim.keymap.set("n", "<leader>dk", "<C-w>k<cmd>close<CR>")
