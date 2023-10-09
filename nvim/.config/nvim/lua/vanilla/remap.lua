@@ -62,6 +62,18 @@ vim.keymap.set("n", "<leader>q", function()
   end
 end)
 
+-- Write shortcut
+vim.keymap.set("n", "<leader>w", function()
+  local buftype = vim.api.nvim_buf_get_option(0, 'buftype')
+  local readonly = vim.api.nvim_buf_get_option(0, 'readonly')
+
+  if buftype == 'terminal' or readonly then
+  else
+    print("Saving");
+    vim.api.nvim_command("w")
+  end
+end)
+
 -- Format
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
