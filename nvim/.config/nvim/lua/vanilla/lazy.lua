@@ -18,10 +18,11 @@ require("lazy").setup({
     tag = '0.1.3',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
+  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
   -- VSCode theme
   'Mofiqul/vscode.nvim',
   -- Treesitter: parsing of syntax
-  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+  { 'nvim-treesitter/nvim-treesitter',          build = ':TSUpdate' },
   -- Switch between pieces of code
   'ThePrimeagen/harpoon',
   -- Local tree of undos and redos
@@ -32,7 +33,7 @@ require("lazy").setup({
   -- Git
   'tpope/vim-fugitive',
   -- Github Copilot
-  { 'github/copilot.vim',              branch = 'release', event = 'InsertEnter' },
+  { 'github/copilot.vim', branch = 'release', event = 'InsertEnter' },
   -- For funsies
   {
     'eandrju/cellular-automaton.nvim',
@@ -60,6 +61,8 @@ require("lazy").setup({
       { 'L3MON4D3/LuaSnip' },
     }
   },
+  -- Devicons
+  'nvim-tree/nvim-web-devicons',
   -- Notification popups
   {
     "folke/noice.nvim",
