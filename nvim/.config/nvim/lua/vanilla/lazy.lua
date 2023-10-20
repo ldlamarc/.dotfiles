@@ -44,6 +44,8 @@ require("lazy").setup({
   },
   -- Comment out lines with gcc (insert mode, supports count) and gc (visual mode)
   'tpope/vim-commentary',
+  -- Surround text with quotes, brackets, etc
+  'tpope/vim-surround',
   -- Faster navigation
   'ggandor/leap.nvim',
   -- LSP for solargraph etc
