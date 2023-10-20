@@ -164,7 +164,17 @@ bindkey ^S history-incremental-search-forward
 
 # p10k is the theme for the prompt
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Syntax highlighting
 source /Users/laurens/lib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# zoxide is a smarter cd
 eval "$(zoxide init zsh)"
+
+# Enable autosuggestions, ctrl-space to accept
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^ ' autosuggest-accept
+
