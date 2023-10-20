@@ -78,7 +78,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump git asdf)
+plugins=(git asdf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -135,6 +135,7 @@ alias gcbf='git checkout "$(git branch --all | fzf | tr -d '\''[:space:]'\'')"'
 # Modern versions
 alias ls="eza"
 alias cat="bat"
+alias j="z"
 
 # Project specific private aliases that don't need to be versioned
 # If private_aliases file exists, source it
@@ -166,3 +167,4 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source /Users/laurens/lib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval "$(zoxide init zsh)"
