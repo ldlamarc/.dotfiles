@@ -19,7 +19,7 @@ make
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Various terminal tools
-brew install tldr fzf powerlevel10k eza bat tmux ripgrep neovim fd lazygit
+brew install tldr fzf powerlevel10k eza bat tmux ripgrep neovim fd lazygit jq
 ```
 
 
