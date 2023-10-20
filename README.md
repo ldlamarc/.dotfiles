@@ -20,6 +20,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # Various terminal tools
 brew install tldr fzf powerlevel10k eza bat tmux ripgrep neovim fd lazygit jq
+
+# Various other tools
+
+[Terminal syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#in-your-zshrc)
 ```
 
 
