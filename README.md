@@ -11,7 +11,15 @@ All config is stored in this repository and symlinked to the correct places with
 ```
 brew install stow
 
-bash install.sh
+make
+
+# Other dependencies (might not be all)
+
+# Oh my zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Various terminal tools
+brew install tldr fzf powerlevel10k eza bat tmux ripgrep neovim fd lazygit
 ```
 
 
