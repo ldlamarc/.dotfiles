@@ -136,6 +136,8 @@ alias gcbf='git checkout "$(git branch --all | fzf | tr -d '\''[:space:]'\'')"'
 alias ls="eza"
 alias cat="bat"
 alias j="z"
+# Good git client for terminal
+alias lg='lazygit'
 
 # Project specific private aliases that don't need to be versioned
 # If private_aliases file exists, source it
