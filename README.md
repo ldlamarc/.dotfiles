@@ -39,7 +39,7 @@ Be sure to configure the locations of your project directories well. See bin/tmu
 ## Navigation
 
 | Environment | Command | Description |
-| ----------- | ----------- |
+| ----------- | ----------- | ----------- | 
 | OS X | alt+space | apps/internet/bookmarks/history |
 | OS X | ctrl+1-9 | spaces (with fixed apps) |
 | OS X | alt+f | focus windows |
@@ -58,7 +58,7 @@ Be sure to configure the locations of your project directories well. See bin/tmu
 ## Organisation
 
 | Environment | Command | Description |
-| ----------- | ----------- |
+| ----------- | ----------- | ----------- | 
 | OS X | alt+m | move windows | 
 | Tmux | \<leader\>w  | list windows (del: x) | 
 | Tmux | \<leader\>c  | new window | 
