@@ -132,6 +132,9 @@ alias rubocoptodo="bundle exec rubocop --config .rubocop.ci.yml --auto-gen-confi
 alias kservers="lsof -i:3000 -t | xargs kill -9;lsof -i:3035 -t | xargs kill -9"
 alias fguard="guard -g focus"
 alias gcbf='git checkout "$(git branch --all | fzf | tr -d '\''[:space:]'\'')"'
+alias ta="tmux a"
+alias nv="nvim ."
+
 # Modern versions
 alias ls="eza"
 alias cat="bat"
@@ -179,4 +182,3 @@ eval "$(zoxide init zsh)"
 # Enable autosuggestions, ctrl-space to accept
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-accept
-
