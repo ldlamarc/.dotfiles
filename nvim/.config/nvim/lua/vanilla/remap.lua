@@ -51,6 +51,9 @@ vim.keymap.set("n", "<leader>q", "ZQ")
 -- Write shortcut
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 
+-- Write and quit shortcut
+vim.keymap.set("n", "<leader>wq", "ZZ")
+
 -- Format
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
