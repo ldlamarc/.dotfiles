@@ -49,7 +49,7 @@ vim.keymap.set("n", "<leader>dl", "<C-w>l<cmd>close<CR>")
 vim.keymap.set("n", "<leader>q", "ZQ")
 
 -- Write shortcut
-vim.keymap.set("n", "<leader>w", "ZZ")
+vim.keymap.set("n", "<leader>w", ":w<CR>")
 
 -- Format
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
@@ -62,9 +62,6 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- Substitute word under cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-
--- Make file executable
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Go to plugins
 vim.keymap.set("n", "<leader>x", "<cmd>e ~/.config/nvim/lua/vanilla/packer.lua<CR>");
