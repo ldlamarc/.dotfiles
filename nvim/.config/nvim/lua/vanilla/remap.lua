@@ -45,34 +45,11 @@ vim.keymap.set("n", "<leader>dj", "<C-w>j<cmd>close<CR>")
 vim.keymap.set("n", "<leader>dk", "<C-w>k<cmd>close<CR>")
 vim.keymap.set("n", "<leader>dl", "<C-w>l<cmd>close<CR>")
 
--- Save shortcut
-vim.keymap.set("n", "<leader>u", vim.cmd.update)
-
 -- Close shortcut
-vim.keymap.set("n", "<leader>q", function()
-  local buftype = vim.api.nvim_buf_get_option(0, 'buftype')
-  local readonly = vim.api.nvim_buf_get_option(0, 'readonly')
-
-  if buftype == 'terminal' or readonly then
-    print("Closing terminal");
-    vim.api.nvim_command("q")
-  else
-    print("Saving and closing");
-    vim.api.nvim_command("wq")
-  end
-end)
+vim.keymap.set("n", "<leader>q", "ZQ")
 
 -- Write shortcut
-vim.keymap.set("n", "<leader>w", function()
-  local buftype = vim.api.nvim_buf_get_option(0, 'buftype')
-  local readonly = vim.api.nvim_buf_get_option(0, 'readonly')
-
-  if buftype == 'terminal' or readonly then
-  else
-    print("Saving");
-    vim.api.nvim_command("w")
-  end
-end)
+vim.keymap.set("n", "<leader>w", "ZZ")
 
 -- Format
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
