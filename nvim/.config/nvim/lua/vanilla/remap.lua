@@ -52,7 +52,7 @@ vim.keymap.set("n", "<leader>q", "ZQ")
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 
 -- Write and quit shortcut
-vim.keymap.set("n", "<leader>wq", "ZZ")
+vim.keymap.set("n", "<leader>z", "ZZ")
 
 -- Format
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
@@ -93,7 +93,7 @@ end)
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Go to plugins
-vim.keymap.set("n", "<leader>x", "<cmd>e ~/.config/nvim/lua/vanilla/packer.lua<CR>");
+vim.keymap.set("n", "<leader>x", "<cmd>e ~/.config/nvim/lua/vanilla/lazy.lua<CR>");
 
 -- Source file
 vim.keymap.set("n", "<leader><leader>", function()
