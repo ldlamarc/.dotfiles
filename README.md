@@ -19,10 +19,11 @@ make
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Various terminal tools
-brew install tldr fzf powerlevel10k eza bat tmux ripgrep neovim fd lazygit jq zoxide zsh-autosuggestions
+brew install tldr fzf powerlevel10k eza bat tmux ripgrep neovim fd lazygit jq zoxide zsh-autosuggestions gh
 ```
 ## Various other installing/configuring
 
+- Configure and log in for gh tool
 - [Terminal syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#in-your-zshrc)
 - Try to disable motion when switching spaces and mapping them to Ctrl-1-10.
 - See yabairc to change default space->app mappings
@@ -81,3 +82,8 @@ Basic vim and:
 See:
 - lazygit (terminal), press ? for keybindings
 - vim-fugitive (nvim), 
+
+| Environment | Command | Description |
+| ----------- | ----------- | ----------- | 
+| Neovim n | \<leader\>gbpr | open GH PR of line in web | 
+| Neovim n | \<leader\>gbco  | open commit of line in web | 
