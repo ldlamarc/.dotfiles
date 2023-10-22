@@ -57,6 +57,32 @@ vim.keymap.set("n", "<leader>wq", "ZZ")
 -- Format
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
+-- Github blame commit
+vim.keymap.set("n", "<leader>gbco", ":GitBlameOpenCommitURL<CR>")
+
+-- Github blame PR
+vim.keymap.set("n", "<leader>gbpr", function()
+  -- Get current line number
+  local line_num = vim.fn.line(".")
+  local file_path = vim.fn.expand('%')
+  local blame_command = string.format("git blame -L %d,%d %s | awk 'NR == 1 {print $1}' ", line_num, line_num, file_path)
+
+  -- Retrieve the commit SHA for the current line
+  local commit_sha = vim.trim(vim.fn.system(blame_command))
+
+  if commit_sha == "00000000" then
+    print("No commit found")
+    return
+  else
+    local pr_number = vim.trim(vim.fn.system('gh pr list --search "' .. commit_sha .. ' is:merged" | awk \'{print $1}\''))
+    if pr_number == "" then
+      print("No PR found")
+      return
+    end
+    vim.fn.system('gh pr view ' .. pr_number .. ' --web')
+  end
+end)
+
 -- to investigate
 -- vim.keymap.set("n", "<leader>K", "<cmd>cnext<CR>zz")
 -- vim.keymap.set("n", "<leader>J", "<cmd>cprev<CR>zz")

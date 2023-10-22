@@ -181,4 +181,5 @@ eval "$(zoxide init zsh)"
 
 # Enable autosuggestions, ctrl-space to accept
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Zsh autosuggest
 bindkey '^ ' autosuggest-accept
