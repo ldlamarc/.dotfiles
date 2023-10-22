@@ -87,3 +87,10 @@ See:
 | ----------- | ----------- | ----------- | 
 | Neovim n | \<leader\>gbpr | open GH PR of line in web | 
 | Neovim n | \<leader\>gbco  | open commit of line in web | 
+
+# Debug / Profile
+
+- Neovim :Lazy (see how much time each plugin took)
+- hyperfine "nvim . --headless +qa" --warmup 10 
+- Neovim: :LspInfo
+- Neovim: :checkhealth
