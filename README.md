@@ -87,6 +87,7 @@ See:
 | ----------- | ----------- | ----------- | 
 | Neovim n | \<leader\>gbpr | open GH PR of line in web | 
 | Neovim n | \<leader\>gbco  | open commit of line in web | 
+| Neovim n | \<leader\>gl  | git log (navigate with leaderJ-K, back with ctrl-o)| 
 
 # Debug / Profile
 

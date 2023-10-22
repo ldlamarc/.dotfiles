@@ -57,6 +57,9 @@ vim.keymap.set("n", "<leader>z", "ZZ")
 -- Format
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
+-- Git log
+vim.keymap.set("n", "<leader>gl", ":Gclog<CR>")
+
 -- Github blame commit
 vim.keymap.set("n", "<leader>gbco", ":GitBlameOpenCommitURL<CR>")
 
@@ -84,10 +87,10 @@ vim.keymap.set("n", "<leader>gbpr", function()
 end)
 
 -- to investigate
--- vim.keymap.set("n", "<leader>K", "<cmd>cnext<CR>zz")
--- vim.keymap.set("n", "<leader>J", "<cmd>cprev<CR>zz")
--- vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
--- vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+vim.keymap.set("n", "<leader>J", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<leader>K", "<cmd>cprev<CR>zz")
+vim.keymap.set("n", "<leader>L", "<cmd>lnext<CR>zz")
+vim.keymap.set("n", "<leader>H", "<cmd>lprev<CR>zz")
 
 -- Substitute word under cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])

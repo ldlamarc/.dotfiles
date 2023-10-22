@@ -34,6 +34,8 @@ require("lazy").setup({
   'tpope/vim-fugitive',
   -- Git blame
   'f-person/git-blame.nvim',
+  -- Git gutter
+  'lewis6991/gitsigns.nvim',
   -- Github Copilot
   { 'github/copilot.vim', branch = 'release', event = 'InsertEnter' },
   -- For funsies
