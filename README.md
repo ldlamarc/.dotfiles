@@ -68,7 +68,7 @@ Be sure to configure the locations of your project directories well. See bin/tmu
 | Neovim n | \<leader\>sj/l  | split h/v | 
 | Neovim ntwr | % | create file | 
 | Neovim ntwr | d | create directory | 
-| Neovim n | \<leader\>y | manage marked locations |
+| Neovim n | \<leader\>uu | manage marked locations |
 | Neovim n | \<leader\>a | mark location |
 
 ## Editing
