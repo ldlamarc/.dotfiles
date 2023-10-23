@@ -52,6 +52,16 @@ require("lazy").setup({
   'tpope/vim-surround',
   -- Faster navigation
   'ggandor/leap.nvim',
+  -- Persisted yanking
+  {
+    "AckslD/nvim-neoclip.lua",
+    dependencies = {
+      { 'nvim-telescope/telescope.nvim' }
+    },
+    config = function()
+      require('neoclip').setup()
+    end,
+  },
   -- LSP for solargraph etc
   {
     'VonHeikemen/lsp-zero.nvim',
