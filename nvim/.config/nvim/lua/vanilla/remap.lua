@@ -30,7 +30,7 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set("n", "Q", "<nop>")
 
 -- Search through tmux sessions
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmuxinator-sessionizer<CR>")
 
 -- Pane creation, movement and deletion
 vim.keymap.set("n", "<leader>sl", "<cmd>vsplit<CR><C-w>l")
