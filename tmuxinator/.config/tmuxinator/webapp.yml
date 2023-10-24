@@ -46,12 +46,19 @@ root: ~/abbove/paxfamilia/webapp
 
 windows:
   - editor:
-      layout: main-vertical
+      # layout: main-horizontal # https://stackoverflow.com/questions/9812000/specify-pane-percentage-in-tmuxinator-project/9976282#9976282
+      # https://thoughtbot.com/blog/templating-tmux-with-tmuxinator
+      layout: 6ab3,214x55,0,0[214x40,0,0,29,214x14,0,41,32]
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - nvim
+        - nvim .
         - guard
-  - server: bundle exec rails s
-  - logs: tail -f log/development.log
+  - servers:
+      layout: main-vertical
+      panes:
+        - WEB_CONCURRENCY=1 bin/rails s -b 0.0.0.0
+        - bundle exec sidekiq
+        - bin/vite dev
+  - other:
