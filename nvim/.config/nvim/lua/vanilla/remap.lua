@@ -105,3 +105,5 @@ vim.keymap.set("n", "<leader>x", "<cmd>e ~/.config/nvim/lua/vanilla/lazy.lua<CR>
 vim.keymap.set("n", "<leader><leader>", function()
   vim.cmd("so")
 end)
+-- Make file executable
+vim.keymap.set("n", "<leader>X", "<cmd>!chmod +x %<CR>", { silent = true })
