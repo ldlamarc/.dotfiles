@@ -19,8 +19,12 @@ require("lazy").setup({
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
-  -- VSCode theme
-  'Mofiqul/vscode.nvim',
+  -- Most popular theme
+  "folke/tokyonight.nvim",
+  -- Github theme (matches github)
+  'projekt0n/github-nvim-theme',
+  -- Dracula theme (matches tmux)
+  'dracula/vim',
   -- Treesitter: parsing of syntax
   { 'nvim-treesitter/nvim-treesitter',          build = ':TSUpdate' },
   -- Switch between pieces of code

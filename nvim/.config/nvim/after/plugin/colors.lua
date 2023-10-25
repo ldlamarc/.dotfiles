@@ -1,1 +1,1 @@
-require('vscode').load('dark')
+vim.cmd('colorscheme github_dark_high_contrast')
