@@ -3,10 +3,6 @@
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "none",
     "git.enableCommitSigning": true,
-    "python.linting.lintOnSave": false,
-    "python.formatting.autopep8Args": [
-        "--max-line-length=240"
-    ],
     "terminal.integrated.defaultProfile.osx": "zsh",
     "terminal.integrated.shellIntegration.enabled": false,
     "playwright.reuseBrowser": true,
@@ -44,8 +40,6 @@
         "*.rb": "ruby"
     },
     "gitlens.advanced.fileHistoryFollowsRenames": true,
-    "ruby.useLanguageServer": true,
-    "ruby.intellisense": "rubyLocate",
     "workbench.editor.showTabs": false,
     "editor.renderControlCharacters": false,
     "githubPullRequests.ignoredPullRequestBranches": [
@@ -55,6 +49,12 @@
 	"editor.formatOnPaste": false, // required 
 	"editor.formatOnType": false, // required
 	"editor.formatOnSave": true, // optional 
+    "editor.lineNumbers": "relative",
 	"editor.formatOnSaveMode": "file", // required to format on save
-	"files.autoSave": "onFocusChange" // optional but recommended
+    "files.autoSave": "onFocusChange",
+    "workbench.activityBar.visible": false,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    }, // optional but recommended
+    "vscode-neovim.neovimInitVimPaths.darwin": "NONE",
 }
