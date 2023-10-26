@@ -16,7 +16,14 @@ require("lazy").setup({
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.3',
-    dependencies = { 'nvim-lua/plenary.nvim' }
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      {
+        -- allows passing extra args to live_grep to eg scope folders/filetypes
+        "nvim-telescope/telescope-live-grep-args.nvim",
+        version = "^1.0.0",
+      },
+    },
   },
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
   -- Most popular theme

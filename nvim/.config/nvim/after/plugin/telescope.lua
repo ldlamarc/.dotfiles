@@ -18,6 +18,18 @@ telescope.setup {
     sorting_strategy = 'ascending',
     vimgrep_arguments = vimgrep_arguments
   },
+  extensions = {
+    live_grep_args = {
+      auto_quoting = true,
+      mappings = {
+        i = {
+          ["<C-j>"] = require('telescope.actions').cycle_history_next,
+          ["<C-k>"] = require('telescope.actions').cycle_history_prev,
+          ["<C-s>"] = require("telescope-live-grep-args.actions").quote_prompt(),
+        },
+      },
+    },
+  },
   pickers = {
     find_files = {
       find_command = { 'rg', '--files', '--hidden', '-g', '!.git' },
@@ -27,14 +39,6 @@ telescope.setup {
     },
     buffers = {
       show_all_buffers = true
-    },
-    live_grep = {
-      mappings = {
-        i = {
-          ["<C-j>"] = require('telescope.actions').cycle_history_next,
-          ["<C-k>"] = require('telescope.actions').cycle_history_prev,
-        },
-      },
     },
     git_status = {
       git_icons = {
@@ -53,12 +57,12 @@ telescope.setup {
 }
 
 telescope.load_extension('fzf')
-
+telescope.load_extension("live_grep_args")
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})
-vim.keymap.set('n', '<leader>pg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>pg', telescope.extensions.live_grep_args.live_grep_args, {})
 vim.keymap.set('n', '<leader>pb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>ph', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>pw', builtin.grep_string, {}) -- grep current word/selection
