@@ -92,9 +92,6 @@ vim.keymap.set("n", "<leader>K", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>L", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>H", "<cmd>lprev<CR>zz")
 
--- Yank history
-vim.keymap.set("n", "<leader>c", ":lua require('telescope').extensions.neoclip.default()<CR>")
-
 -- Substitute word under cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
