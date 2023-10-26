@@ -9,6 +9,11 @@ table.insert(vimgrep_arguments, "--hidden")
 -- I don't want to search in the `.git` directory.
 table.insert(vimgrep_arguments, "--glob")
 table.insert(vimgrep_arguments, "!**/.git/*")
+-- No images
+table.insert(vimgrep_arguments, "--glob")
+table.insert(vimgrep_arguments, "!*.png")
+table.insert(vimgrep_arguments, "--glob")
+table.insert(vimgrep_arguments, "!*.jpg")
 
 telescope.setup {
   defaults = {
@@ -32,7 +37,7 @@ telescope.setup {
   },
   pickers = {
     find_files = {
-      find_command = { 'rg', '--files', '--hidden', '-g', '!.git' },
+      find_command = { 'rg', '--files', '--hidden', '-g', '!.git', '-g', '!*.png', '-g', '!*.jpg', '-g', '!*.keep' },
       layout_config = {
         height = 0.70
       }
