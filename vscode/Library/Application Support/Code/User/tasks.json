@@ -1,0 +1,92 @@
+{
+  "version": "2.0.0",
+  "presentation": {
+    "echo": false,
+    "focus": false,
+    "panel": "dedicated",
+    "reveal": "never"
+  },
+  "options": {
+    "shell": {
+      "args": ["-c"]
+    }
+  },
+  "tasks": [
+    {
+      "label": "Start Docker",
+      "type": "shell",
+      "command": "docker-compose up -d",
+      "options": {
+        "name": "Docker",
+      },
+      "presentation": {
+        "group": "servers",
+        "close": true
+      },
+    },
+    {
+      "label": "Rails",
+      "type": "shell",
+      "command": "WEB_CONCURRENCY=1 bin/rails s -b 0.0.0.0",
+      "options": {
+        "name": "rails",
+      },
+      "dependsOrder": "sequence",
+      "dependsOn": ["Start Docker"],
+      "isBackground": true,
+      "presentation": {
+        "group": "servers"
+      }
+    },
+    {
+      "label": "Vite",
+      "type": "shell",
+      "command": "bin/vite dev",
+      "options": {
+        "name": "vite"
+      },
+      "isBackground": true,
+      "presentation": {
+        "group": "servers"
+      }
+    },
+    {
+      "label": "Sidekiq",
+      "type": "shell",
+      "command": "bundle exec sidekiq",
+      "options": {
+        "name": "sidekiq"
+      },
+      "isBackground": true,
+      "dependsOrder": "sequence",
+      "dependsOn": ["Start Docker"],
+      "presentation": {
+        "group": "servers"
+      }
+    },
+    {
+      "label": "Start guard",
+      "type": "shell",
+      "command": "guard",
+      "options": {
+        "name": "guard"
+      },
+      "isBackground": true,
+      "dependsOrder": "sequence",
+      "dependsOn": ["Start Docker"]
+    },
+    {
+      "label": "Start all servers",
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOn": ["Sidekiq", "Vite", "Rails"],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
+}
+

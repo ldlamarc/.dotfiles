@@ -1,0 +1,60 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "none",
+    "git.enableCommitSigning": true,
+    "python.linting.lintOnSave": false,
+    "python.formatting.autopep8Args": [
+        "--max-line-length=240"
+    ],
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.shellIntegration.enabled": false,
+    "playwright.reuseBrowser": true,
+    "docker.enableDockerComposeLanguageService": false,
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    },
+    "files.insertFinalNewline": true,
+    "editor.tabSize": 2,
+    "editor.inlineSuggest.enabled": true,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "yaml": true,
+        "ruby": true
+    },
+    "githubPullRequests.pullBranch": "never",
+    "terminal.integrated.persistentSessionScrollback": 10000,
+    "terminal.integrated.scrollback": 10000,
+    "[ruby]": {
+        "editor.defaultFormatter": "misogi.ruby-rubocop"
+    },
+    "rubyLsp.formatter": "rubocop",
+    "vs-code-prettier-eslint.prettierLast": true,
+    "search.searchOnTypeDebouncePeriod": 100,
+    "files.associations": {
+        "*.rb": "ruby"
+    },
+    "gitlens.advanced.fileHistoryFollowsRenames": true,
+    "ruby.useLanguageServer": true,
+    "ruby.intellisense": "rubyLocate",
+    "workbench.editor.showTabs": false,
+    "editor.renderControlCharacters": false,
+    "githubPullRequests.ignoredPullRequestBranches": [
+		"main"
+	],
+	"editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+	"editor.formatOnPaste": false, // required 
+	"editor.formatOnType": false, // required
+	"editor.formatOnSave": true, // optional 
+	"editor.formatOnSaveMode": "file", // required to format on save
+	"files.autoSave": "onFocusChange" // optional but recommended
+}
