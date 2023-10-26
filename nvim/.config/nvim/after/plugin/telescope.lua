@@ -29,6 +29,12 @@ telescope.setup {
       show_all_buffers = true
     },
     live_grep = {
+      mappings = {
+        i = {
+          ["<C-j>"] = require('telescope.actions').cycle_history_next,
+          ["<C-k>"] = require('telescope.actions').cycle_history_prev,
+        },
+      },
     },
     git_status = {
       git_icons = {
