@@ -48,7 +48,7 @@ require("lazy").setup({
   -- Git gutter
   'lewis6991/gitsigns.nvim',
   -- Github Copilot
-  { 'github/copilot.vim', branch = 'release', event = 'InsertEnter' },
+  { 'github/copilot.vim',    branch = 'release',                         event = 'InsertEnter' },
   -- For funsies
   {
     'eandrju/cellular-automaton.nvim',
@@ -61,6 +61,8 @@ require("lazy").setup({
   'tpope/vim-commentary',
   -- Surround text with quotes, brackets, etc
   'tpope/vim-surround',
+  -- Folding code
+  { 'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async' },
   -- Faster navigation
   'ggandor/leap.nvim',
   -- Persisted yanking
