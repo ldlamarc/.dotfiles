@@ -58,7 +58,8 @@ vim.keymap.set("n", "<leader>z", "ZZ")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- Git log
-vim.keymap.set("n", "<leader>gl", ":Gclog<CR>")
+vim.keymap.set("n", "<leader>gl", ":0Gclog<CR>")
+vim.keymap.set("v", "<leader>gl", ":Gclog<CR>")
 
 -- Github blame commit
 vim.keymap.set("n", "<leader>gbco", ":GitBlameOpenCommitURL<CR>")
