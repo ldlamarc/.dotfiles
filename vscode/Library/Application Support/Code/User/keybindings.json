@@ -11,7 +11,6 @@
     {
         "key": "cmd+k cmd+r",
         "command": "workbench.action.tasks.runTask",
-        "args": "Start all servers"
     },
     {
         "key": "cmd+k cmd+g",
