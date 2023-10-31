@@ -1,57 +1,192 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
+    // Neovim non-insert bindings (allows space as leader)
     {
-        "key": "cmd+k cmd+left",
-        "command": "workbench.action.moveEditorToLeftGroup"
+        "key":"space s l",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "workbench.action.splitEditorRight"
     },
     {
-        "key": "cmd+k cmd+right",
-        "command": "workbench.action.moveEditorToRightGroup"
+        "key":"space s j",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "workbench.action.splitEditorDown"
     },
     {
-        "key": "cmd+k cmd+r",
-        "command": "workbench.action.tasks.runTask",
+        "key":"space q",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "workbench.action.closeActiveEditor"
     },
     {
-        "key": "cmd+k cmd+g",
-        "command": "workbench.action.tasks.runTask",
-        "args": "Start guard"
+        "key":"space w",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "workbench.action.files.save"
     },
     {
-        "key": "cmd+k cmd+p",
+        "key":"space p f",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key":"space p g",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "workbench.action.findInFiles"
+    },
+    {
+        "key":"space r",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "workbench.action.replaceInFiles" 
+    },
+    {
+        "key":"space p p",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key":"space e",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "workbench.view.explorer"
+    },
+    {
+        "key":"space b",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key":"space x",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "workbench.view.extensions" 
+    },
+    {
+        "key":"space g l",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "timeline.focus"
+    },
+    {
+        "key":"space g b p r",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "gitlens.openAssociatedPullRequestOnRemote"
+    },
+    {
+        "key":"space o t",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "extension.railsGoToSpec"
+    },
+    {
+        "key":"space t s",
+        "when": "editorTextFocus && neovim.mode != insert",
         "command": "workbench.action.tasks.runTask",
         "args": "Start all servers"
     },
     {
-        "key": "cmd+k cmd+up",
-        "command": "workbench.action.moveEditorToAboveGroup"
+        "key":"space t a c",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "workbench.panel.chat.view.copilot.focus" 
     },
     {
-        "key": "cmd+k cmd+down",
-        "command": "workbench.action.moveEditorToBelowGroup"
+        "key":"space a",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "vscode-harpoon.addEditor"
     },
     {
-        "key": "cmd+k right",
+        "key":"space u u",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "vscode-harpoon.editEditors"
+    },
+    {
+        "key":"space h",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "vscode-harpoon.gotoEditor1"
+    },
+    {
+        "key":"space j",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "vscode-harpoon.gotoEditor2"
+    },
+    {
+        "key":"space k",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "vscode-harpoon.gotoEditor3"
+    },
+    {
+        "key":"space l",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "vscode-harpoon.gotoEditor4"
+    },
+    // Tmux bindings (ctrl-a as leader)
+    {
+        "key":"ctrl+a 1",
+        "command": "workbench.action.terminal.focusAtIndex1"
+    },
+    {
+        "key":"ctrl+a 2",
+        "command": "workbench.action.terminal.focusAtIndex2"
+    },
+    {
+        "key":"ctrl+a 3",
+        "command": "workbench.action.terminal.focusAtIndex3"
+    },
+    {
+        "key":"ctrl+a 4",
+        "command": "workbench.action.terminal.focusAtIndex4"
+    },
+    {
+        "key":"ctrl+a 5",
+        "command": "workbench.action.terminal.focusAtIndex5"
+    },
+    {
+        "key":"ctrl+a c",
+        "command": "workbench.action.terminal.new"
+    },
+    {
+        "key":"ctrl+a w",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+a l",
+        "command": "workbench.action.splitEditorRight"
+    },
+    {
+        "key": "ctrl+a j",
+        "command": "workbench.action.splitEditorDown"
+    },
+    {
+        "key": "ctrl+a r",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Start all servers"
+    },
+    {
+        "key": "ctrl+a g",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Start guard"
+    },
+    {
+        "key": "ctrl+l",
         "command": "workbench.action.navigateRight"
     },
     {
-        "key": "cmd+k left",
+        "key": "ctrl+h",
         "command": "workbench.action.navigateLeft"
     },
     {
-        "key": "cmd+k up",
+        "key": "ctrl+k",
         "command": "workbench.action.navigateUp"
     },
     {
-        "key": "cmd+k down",
+        "key": "ctrl+j",
         "command": "workbench.action.navigateDown"
     },
-    {
-        "key": "cmd+k cmd+down",
-        "command": "-workbench.action.closeActiveEditor"
-    },
+    // Vscode overwrites
     {
         "key": "cmd+n",
-        "command": "explorer.newFile"
-    }
+        "command": "explorer.newFile" // Replaces new file in editor with in explorer (so we can name it)
+    },
+    // Vscode specific extensions
+    {
+        "key": "ctrl+j",
+        "command": "search.action.focusNextSearchResult" 
+    },
+    {
+        "key": "ctrl+k",
+        "command": "search.action.focusPreviousSearchResult" 
+    },
 ]

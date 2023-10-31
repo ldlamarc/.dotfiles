@@ -25,3 +25,4 @@ redhat.vscode-yaml
 rvest.vs-code-prettier-eslint
 Shopify.ruby-lsp
 sporto.rails-go-to-spec
+tobias-z.vscode-harpoon
