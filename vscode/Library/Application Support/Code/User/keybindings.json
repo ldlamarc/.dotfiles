@@ -78,6 +78,12 @@
         "args": "Start all servers"
     },
     {
+        "key":"space t g",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Start guard"
+    },
+    {
         "key":"space t a c",
         "when": "editorTextFocus && neovim.mode != insert",
         "command": "workbench.panel.chat.view.copilot.focus" 
@@ -148,16 +154,6 @@
     {
         "key": "ctrl+a j",
         "command": "workbench.action.splitEditorDown"
-    },
-    {
-        "key": "ctrl+a r",
-        "command": "workbench.action.tasks.runTask",
-        "args": "Start all servers"
-    },
-    {
-        "key": "ctrl+a g",
-        "command": "workbench.action.tasks.runTask",
-        "args": "Start guard"
     },
     {
         "key": "ctrl+l",
