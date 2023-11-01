@@ -34,8 +34,11 @@ brew install tldr fzf powerlevel10k eza bat tmux ripgrep neovim fd lazygit jq zo
 
 Neovim: leader is space
 Tmux: leader is Ctrl-a
+VSCode: leader can be space (neovim extenstion normal mode), ctrl-a (tmux like commands) or ctrl (custom)/cmd (default). 
 
 Be sure to configure the locations of your project directories well. See bin/tmux-sessionizer.
+
+Not all keymaps listed. Check config/\<leader\>pk.
 
 ## Navigation
 
@@ -46,13 +49,15 @@ Be sure to configure the locations of your project directories well. See bin/tmu
 | OS X | alt+f | focus windows |
 | Neovim n | ctrl+f | projects |
 | Tmux | \<leader\>f | projects |
-| Tmux | \<leader\>1-9 | go to window |
-| Neovim n/Tmux | ctrl+h/j/k/l | navigate panes |
-| Neovim n | \<leader\>pf | files |
-| Neovim n | \<leader\>ps | project content |
-| Neovim n | \<leader\>h/j/k/l | go to marked location |
-| Neovim n | \<leader\>e | parent directory |
-| Neovim n | \<leader\>x | nvim plugins |
+| Tmux/VSC | \<leader\>1-9 | go to window |
+| Neovim n/Tmux/VSC | ctrl+h/j/k/l | navigate panes |
+| Neovim n/VSC | \<leader\>pf | files |
+| Neovim n/VSC | \<leader\>pg | project content |
+| Neovim n/VSC | \<leader\>pk | keymappings |
+| Neovim n/VSC | \<leader\>pp | commands |
+| Neovim n/VSC | \<leader\>h/j/k/l | go to marked location |
+| Neovim n/VSC | \<leader\>e | parent directory |
+| Neovim n/VSC | \<leader\>x | plugins/extensions |
 | Neovim n | s\<char\>\<char\> | leap to word in file |
 | Neovim v | x\<char\>\<char\> | leap to word in file |
 
@@ -61,19 +66,20 @@ Be sure to configure the locations of your project directories well. See bin/tmu
 | Environment | Command | Description |
 | ----------- | ----------- | ----------- | 
 | OS X | alt+m | move windows | 
-| Tmux | \<leader\>w  | list windows (del: x) | 
-| Tmux | \<leader\>c  | new window | 
+| Tmux/VSC | \<leader\>w  | list windows (del: x) | 
+| Tmux/VSC | \<leader\>c  | new window | 
 | Tmux | \<leader\>j/l  | split h/v | 
-| Neovim n | \<leader\>sj/l  | split h/v | 
-| Neovim n | \<leader\>sj/l  | split h/v | 
+| Neovim n/VSC | \<leader\>sj/l  | split h/v | 
+| Neovim n/VSC | \<leader\>sj/l  | split h/v | 
 | Neovim ntwr | % | create file | 
+| VSC | cmd+n | create file | 
 | Neovim ntwr | d | create directory | 
-| Neovim n | \<leader\>uu | manage marked locations |
-| Neovim n | \<leader\>a | mark location |
+| Neovim n/VSC | \<leader\>uu | manage marked locations |
+| Neovim n/VSC | \<leader\>a | mark location |
 
 ## Editing
 
-Basic vim and:
+Basic vim and (in nvim):
 - vim-surround
 - vim-commentary
 
@@ -85,9 +91,9 @@ See:
 
 | Environment | Command | Description |
 | ----------- | ----------- | ----------- | 
-| Neovim n | \<leader\>gbpr | open GH PR of line in web | 
+| Neovim n/VSC | \<leader\>gl  | git log (navigate with leaderJ-K, back with ctrl-o)| 
+| Neovim n/VSC | \<leader\>gbpr | open GH PR of line in web | 
 | Neovim n | \<leader\>gbco  | open commit of line in web | 
-| Neovim n | \<leader\>gl  | git log (navigate with leaderJ-K, back with ctrl-o)| 
 
 # Debug / Profile
 
