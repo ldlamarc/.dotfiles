@@ -83,6 +83,14 @@ Basic vim and (in nvim):
 - vim-surround
 - vim-commentary
 
+## Running
+
+| Environment | Command | Description |
+| ----------- | ----------- | ----------- | 
+| VSC | \<space\>tac | copilot chat | 
+| VSC | \<space\>ts | Run all servers | 
+| VSC | \<space\>tg | Run guard | 
+
 # Git
 
 See:
