@@ -32,9 +32,9 @@ brew install tldr fzf powerlevel10k eza bat tmux ripgrep neovim fd lazygit jq zo
 
 # Cheatsheet
 
-Neovim: leader is space
-Tmux: leader is Ctrl-a
-VSCode: leader can be space (neovim extenstion normal mode), ctrl-a (tmux like commands) or ctrl (custom)/cmd (default). 
+- Neovim: leader is space
+- Tmux: leader is Ctrl-a
+- VSCode: leader can be space (neovim extenstion normal mode), ctrl-a (tmux like commands) or ctrl (custom)/cmd (default). 
 
 Be sure to configure the locations of your project directories well. See bin/tmux-sessionizer.
 
