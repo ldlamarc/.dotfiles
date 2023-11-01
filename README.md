@@ -36,6 +36,8 @@ brew install tldr fzf powerlevel10k eza bat tmux ripgrep neovim fd lazygit jq zo
 - Tmux: leader is Ctrl-a
 - VSCode: leader can be space (neovim extenstion normal mode), ctrl-a (tmux like commands) or ctrl (custom)/cmd (default). 
 
+Neovim/VSCode n means normal mode.
+
 Be sure to configure the locations of your project directories well. See bin/tmux-sessionizer.
 
 Not all keymaps listed. Check config/\<leader\>pk.
@@ -87,9 +89,9 @@ Basic vim and (in nvim):
 
 | Environment | Command | Description |
 | ----------- | ----------- | ----------- | 
-| VSC | \<space\>tac | copilot chat | 
-| VSC | \<space\>ts | Run all servers | 
-| VSC | \<space\>tg | Run guard | 
+| VSC n | \<leader\>tac | copilot chat | 
+| VSC n | \<leader\>ts | Run all servers | 
+| VSC n | \<leader\>tg | Run guard | 
 
 # Git
 
