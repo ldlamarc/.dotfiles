@@ -167,6 +167,8 @@ bindkey ^S history-incremental-search-forward
 # Enables fuzzy finding for terminal and vim
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+ulimit -n 10240
+
 # p10k is the theme for the prompt
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
