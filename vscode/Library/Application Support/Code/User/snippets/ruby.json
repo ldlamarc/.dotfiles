@@ -1,0 +1,87 @@
+{
+  "de": {
+		"prefix": "de",
+		"body": [
+			"describe \"${1:description}\" do",
+			"  $0",
+			"end"
+		],
+		"description": "describe \"description\" do … end"
+	},
+  "det": {
+		"prefix": "det",
+		"body": [
+			"describe \"${1:desc}\" do",
+			"  it \"${2:does something}\" do",
+			"    $0",
+			"  end}",
+			"end"
+		],
+		"description": "describe (type)"
+	},
+  "it": {
+    "prefix": "it",
+    "body": [
+      "it \"${1:does something}\" do",
+      "  $0",
+      "end"
+    ],
+    "description": "it \"does something\" do … end"
+  },
+  "co": {
+    "prefix": "co",
+    "body": [
+      "context \"${1:description}\" do",
+      "  $0",
+      "end"
+    ],
+    "description": "context \"description\" do … end"
+  },
+  "be": {
+    "prefix": "be",
+    "body": [
+      "before do",
+      "  $0",
+      "end"
+    ],
+    "description": "before do … end"
+  },
+  "cl": {
+    "prefix": "cl",
+    "body": [
+      "class ${1:ClassName}",
+      "  $0",
+      "end"
+    ],
+    "description": "class ClassName … end"
+  },
+  "cli": {
+    "prefix": "cli",
+    "body": [
+      "class ${1:ClassName}",
+      "  def initialize$2",
+      "    $0",
+      "  end",
+      "end"
+    ],
+    "description": "class ClassName … end"
+  },
+  "df": {
+    "prefix": "df",
+    "body": [
+      "def ${1:method_name}$2",
+      "  $0",
+      "end"
+    ],
+    "description": "def method_name … end"
+  },
+  "dfi": {
+    "prefix": "dfi",
+    "body": [
+      "def initialize$1",
+      "  $0",
+      "end"
+    ],
+    "description": "def method_name(params) … end"
+  },
+}
