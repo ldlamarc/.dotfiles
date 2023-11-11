@@ -1,4 +1,5 @@
 4ops.terraform
+Arjun.swagger-viewer
 asvetliakov.vscode-neovim
 bradlc.vscode-tailwindcss
 castwide.solargraph
