@@ -14,7 +14,7 @@
 			"describe \"${1:desc}\" do",
 			"  it \"${2:does something}\" do",
 			"    $0",
-			"  end}",
+			"  end",
 			"end"
 		],
 		"description": "describe (type)"
@@ -83,5 +83,5 @@
       "end"
     ],
     "description": "def method_name(params) … end"
-  },
+  }
 }
