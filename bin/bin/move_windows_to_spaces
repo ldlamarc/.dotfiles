@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+
+shopt -s extglob
+
+move_windows_to_spaces() {
+    # Detect the number of displays
+    num_displays=$(yabai -m query --displays | jq length)
+    echo "Number of displays: $num_displays"
+
+    # Check the number of displays
+    if [ $num_displays -eq 1 ]
+    then
+        # Move specific apps to specified spaces
+        yabai -m query --windows | jq -c '.[]' | while read -r win; do
+            app=$(echo $win | jq -r .app)
+            id=$(echo $win | jq -r .id)
+            echo "App: $app"
+            case $app in
+                Code ) # VSCode might appear as "Code"
+                    echo "Moving $app to space 1"
+                    yabai -m window $id --space 1
+                    ;;
+                Brave* )
+                    echo "Moving $app to space 2"
+                    yabai -m window $id --space 2
+                    ;;
+                Slack )
+                    echo "Moving $app to space 3"
+                    yabai -m window $id --space 3
+                    ;;
+                Sourcetree )
+                    echo "Moving $app to space 4"
+                    yabai -m window $id --space 4
+                    ;;
+                Notion )
+                    echo "Moving $app to space 5"
+                    yabai -m window $id --space 5
+                    ;;
+                *WhatsApp* )
+                    echo "Moving $app to space 6"
+                    yabai -m window $id --space 6
+                    ;;
+                Spotify )
+                    echo "Moving $app to space 6"
+                    yabai -m window $id --space 6
+                    ;;
+                Finder )
+                    echo "Moving $app to space 7"
+                    yabai -m window $id --space 7
+                    ;;
+                Figma )
+                    echo "Moving $app to space 8"
+                    yabai -m window $id --space 8
+                    ;;
+                iTerm2 )
+                    echo "Moving $app to space 9"
+                    yabai -m window $id --space 9
+                    ;;
+                * )
+                    echo "Moving $app to space 10"
+                    yabai -m window $id --space 10
+                    ;;
+            esac
+        done
+    fi
+}
+
+move_windows_to_spaces

@@ -24,60 +24,6 @@ yabai -m mouse_drop_action swap
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 
-# Move space according to number of displays
-
-move_windows_to_spaces() {    
-    # Detect the number of displays
-    num_displays=$(yabai -m query --displays | jq length)
-
-    # Check the number of displays
-    if [ $num_displays -eq 1 ]
-    then
-        # Move specific apps to specified spaces
-        yabai -m query --windows | jq -c '.[] | select(.space >= 10)' | while read -r win; do
-            app=$(echo $win | jq -r .app)
-            id=$(echo $win | jq -r .id)
-            case $app in
-                "Code") # VSCode might appear as "Code"
-                    yabai -m window $id --space 1
-                    ;;
-                "Brave Browser") 
-                    yabai -m window $id --space 2
-                    ;;
-                "Slack")
-                    yabai -m window $id --space 3
-                    ;;
-                "SourceTree") 
-                    yabai -m window $id --space 4
-                    ;;
-                "Notion") 
-                    yabai -m window $id --space 5
-                    ;;
-                "WhatsApp") 
-                    yabai -m window $id --space 6
-                    ;;
-                "Spotify") 
-                    yabai -m window $id --space 6
-                    ;;
-                "Finder") 
-                    yabai -m window $id --space 7
-                    ;;
-                "Figma") 
-                    yabai -m window $id --space 8
-                    ;;
-                "iTerm2") 
-                    yabai -m window $id --space 9
-                    ;;
-                "*")
-                    yabai -m window $id --space 10
-                    ;;
-            esac
-        done
-    fi
-}
-
-
-
 # Set up your signal handler
 # Place function above in usr/local/bin
-yabai -m signal --add event=display_moved action="sh move_windows_to_spaces"
+yabai -m signal --add event=display_moved action="move_windows_to_spaces"
