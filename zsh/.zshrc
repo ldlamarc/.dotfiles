@@ -134,6 +134,7 @@ alias fguard="guard -g focus"
 alias gcbf='git checkout "$(git branch --all | fzf | tr -d '\''[:space:]'\'')"'
 alias ta="tmux a"
 alias nv="nvim ."
+alias hcpr="hub pull-request -i"
 
 # Modern versions
 alias ls="eza"
@@ -176,7 +177,7 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Syntax highlighting
-source /Users/laurens/lib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/lib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # zoxide is a smarter cd
 eval "$(zoxide init zsh)"
