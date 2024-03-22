@@ -55,6 +55,7 @@ require('mason-lspconfig').setup({
 
 require('lspconfig').tsserver.setup({})
 require('lspconfig').eslint.setup({})
+require('lspconfig').html.setup({})
 require('lspconfig').solargraph.setup({})
 require('lspconfig').lua_ls.setup({
   -- ... other configs
