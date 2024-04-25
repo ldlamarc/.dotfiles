@@ -32,6 +32,8 @@ require("lazy").setup({
   'projekt0n/github-nvim-theme',
   -- Dracula theme (matches tmux)
   'dracula/vim',
+  -- Solarized theme
+  'ericbn/vim-solarized',
   -- Treesitter: parsing of syntax
   { 'nvim-treesitter/nvim-treesitter',          build = ':TSUpdate' },
   -- Switch between pieces of code
