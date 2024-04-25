@@ -16,7 +16,7 @@ move_windows_to_spaces() {
             id=$(echo $win | jq -r .id)
             echo "App: $app"
             case $app in
-                Code ) # VSCode might appear as "Code"
+                iTerm2 )
                     echo "Moving $app to space 1"
                     yabai -m window $id --space 1
                     ;;
@@ -28,7 +28,7 @@ move_windows_to_spaces() {
                     echo "Moving $app to space 3"
                     yabai -m window $id --space 3
                     ;;
-                Sourcetree )
+                Code ) # VSCode might appear as "Code"
                     echo "Moving $app to space 4"
                     yabai -m window $id --space 4
                     ;;
@@ -52,7 +52,7 @@ move_windows_to_spaces() {
                     echo "Moving $app to space 8"
                     yabai -m window $id --space 8
                     ;;
-                iTerm2 )
+                Sourcetree )
                     echo "Moving $app to space 9"
                     yabai -m window $id --space 9
                     ;;
